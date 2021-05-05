@@ -68,7 +68,7 @@ def ban(bot: Bot, update: Update, args: List[str]) -> str:
     except BadRequest as excp:
         if excp.message == "Reply message not found":
             # Do not reply
-            message.reply_text('Banned!', quote=False)
+            message.reply_text('Bonked from the chat!', quote=False)
             return log
         else:
             LOGGER.warning(update)
@@ -142,15 +142,15 @@ def temp_ban(bot: Bot, update: Update, args: List[str]) -> str:
     try:
         chat.kick_member(user_id, until_date=bantime)
         # bot.send_sticker(chat.id, BAN_STICKER)  # banhammer marie sticker
-        bot.sendMessage(chat.id, f"Banned! User {mention_html(member.user.id, member.user.first_name)} "
-                                 f"will be banned for {time_val}.",
+        bot.sendMessage(chat.id, f"Bonked from the chat! User {mention_html(member.user.id, member.user.first_name)} "
+                                 f"will be bonked for {time_val}.",
                         parse_mode=ParseMode.HTML)
         return log
 
     except BadRequest as excp:
         if excp.message == "Reply message not found":
             # Do not reply
-            message.reply_text(f"Banned! User will be banned for {time_val}.", quote=False)
+            message.reply_text(f"Bonked from the chat! User will be bonked for {time_val}.", quote=False)
             return log
         else:
             LOGGER.warning(update)
