@@ -329,14 +329,14 @@ __help__ = """
 *Admin only:*
  - /bonk <userhandle>: bans a user. (via handle, or reply)
  - /tban <userhandle> x(m/h/d): bans a user for x time. (via handle, or reply). m = minutes, h = hours, d = days.
- - /unban <userhandle>: unbans a user. (via handle, or reply)
+ - /unbonk <userhandle>: unbans a user. (via handle, or reply)
  - /punch <userhandle>: Punches a user out of the group, (via handle, or reply)
 """
 
 BAN_HANDLER = CommandHandler("bonk", ban, pass_args=True)
 TEMPBAN_HANDLER = CommandHandler(["tban", "tempban"], temp_ban, pass_args=True)
 PUNCH_HANDLER = CommandHandler("punch", punch, pass_args=True)
-UNBAN_HANDLER = CommandHandler("unban", unban, pass_args=True)
+UNBAN_HANDLER = CommandHandler("unbonk", unban, pass_args=True)
 ROAR_HANDLER = CommandHandler("roar", selfunban, pass_args=True)
 PUNCHME_HANDLER = DisableAbleCommandHandler("punchme", punchme, filters=Filters.group)
 
