@@ -91,7 +91,7 @@ def gban(bot: Bot, update: Update, args: List[str]):
 
         return
 
-    message.reply_text("⚡️ *Snaps the Banhammer* ⚡️")
+    message.reply_text("⚡️ *Snaps the Banhammer, bonked this nibbi glombally*  ⚡️")
 
     banner = update.effective_user  # type: Optional[User]
     send_to_list(bot, SUDO_USERS + SUPPORT_USERS,
@@ -308,7 +308,7 @@ you and your groups by removing spam flooders as quickly as possible. They can b
 
 __mod_name__ = "GLOBAL BAN"
 
-GBAN_HANDLER = CommandHandler("gban", gban, pass_args=True,
+GBAN_HANDLER = CommandHandler("gbonk", gban, pass_args=True,
                               filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
 UNGBAN_HANDLER = CommandHandler("ungban", ungban, pass_args=True,
                                 filters=CustomFilters.sudo_filter | CustomFilters.support_filter)
