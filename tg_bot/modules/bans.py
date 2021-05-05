@@ -334,7 +334,6 @@ __help__ = """
 """
 
 BAN_HANDLER = CommandHandler("bonk", ban, pass_args=True)
-BAN_HANDLER = CommandHandler("ban", ban, pass_args=True)
 TEMPBAN_HANDLER = CommandHandler(["tbonk", "tempban"], temp_ban, pass_args=True)
 PUNCH_HANDLER = CommandHandler("kimck", punch, pass_args=True)
 UNBAN_HANDLER = CommandHandler("unbonk", unban, pass_args=True)
