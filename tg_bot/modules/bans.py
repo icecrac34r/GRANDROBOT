@@ -268,7 +268,7 @@ def unban(bot: Bot, update: Update, args: List[str]) -> str:
         return log_message
 
     chat.unban_member(user_id)
-    message.reply_text("Yep, this user can join!")
+    message.reply_text("Yep, this umser is no lomger bonked!")
 
     log = (f"<b>{html.escape(chat.title)}:</b>\n"
            f"#UNBANNED\n"
