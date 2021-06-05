@@ -144,7 +144,7 @@ def save(bot: Bot, update: Update):
 
     sql.add_note_to_db(chat_id, note_name, text, data_type, buttons=buttons, file=content)
 
-    msg.reply_text(f"Yas! Added {note_name}.\nGet it with /get '{note_name}', or #'{note_name}'")
+    msg.reply_text(f"Yas! Added {note_name}.\nGet it with /get {note_name}, or #{note_name}")
 
     if msg.reply_to_message and msg.reply_to_message.from_user.is_bot:
         if text:
