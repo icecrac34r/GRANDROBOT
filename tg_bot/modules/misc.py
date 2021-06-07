@@ -16,7 +16,7 @@ from tg_bot.__main__ import STATS, USER_INFO, TOKEN
 from tg_bot.modules.disable import DisableAbleCommandHandler
 from tg_bot.modules.helper_funcs.chat_status import user_admin, sudo_plus, bot_admin, can_restrict
 from tg_bot.modules.helper_funcs.extraction import extract_user
-from haruka.modules.helper_funcs.filters import CustomFilters
+from tg_bot.modules.helper_funcs.filters import CustomFilters
 from tg_bot.modules.sql.safemode_sql import set_safemode, is_safemoded
 import tg_bot.modules.sql.users_sql as sql
 
