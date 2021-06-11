@@ -134,6 +134,7 @@ def save(bot: Bot, update: Update):
     msg = update.effective_message  # type: Optional[Message]
 
     note_name, text, data_type, content, buttons = get_note_type(msg)
+    note_name = note_name.lower()
 
     if data_type is None:
         msg.reply_text("Dude, there's no note")
